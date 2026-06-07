@@ -1,4 +1,5 @@
 import { site } from '../../data/site'
+import Reveal from '../Reveal'
 
 // Hero — brand name, tagline, primary "Book a Consultation" CTA over a
 // warm full-bleed salon image.
@@ -28,7 +29,7 @@ function Hero() {
 
       {/* Content */}
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-gold-soft sm:text-xs sm:tracking-[0.35em]">
             {site.name} &middot; Brantford, Ontario
           </p>
@@ -60,7 +61,7 @@ function Hero() {
               View Services
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* Subtle scroll cue */}

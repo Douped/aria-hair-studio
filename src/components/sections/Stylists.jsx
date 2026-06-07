@@ -1,10 +1,11 @@
 import { stylists } from '../../data/stylists'
+import Reveal from '../Reveal'
 
 // Stylists — three bio cards (portrait, name, role/specialty, short bio).
 function Stylists() {
   return (
     <section id="stylists" className="bg-cream px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -22,7 +23,7 @@ function Stylists() {
           {stylists.map((s) => (
             <article
               key={s.name}
-              className="group overflow-hidden rounded-xl border border-sand bg-ivory shadow-sm"
+              className="group overflow-hidden rounded-xl border border-sand bg-ivory shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <div className="aspect-[4/5] overflow-hidden bg-sand">
                 <img
@@ -63,7 +64,7 @@ function Stylists() {
             </article>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

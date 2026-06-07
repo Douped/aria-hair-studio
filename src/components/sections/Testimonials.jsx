@@ -1,4 +1,5 @@
 import { testimonials } from '../../data/testimonials'
+import Reveal from '../Reveal'
 
 // Five small gold stars.
 function Stars() {
@@ -17,7 +18,7 @@ function Stars() {
 function Testimonials() {
   return (
     <section id="testimonials" className="bg-ivory px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -58,7 +59,7 @@ function Testimonials() {
             </figure>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

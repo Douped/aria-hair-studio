@@ -1,11 +1,12 @@
 import { galleryItems } from '../../data/gallery'
+import Reveal from '../Reveal'
 
 // Gallery — a responsive masonry grid of transformation photos with a
 // subtle hover zoom and caption reveal.
 function Gallery() {
   return (
     <section id="gallery" className="bg-ivory px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -40,7 +41,7 @@ function Gallery() {
             </figure>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

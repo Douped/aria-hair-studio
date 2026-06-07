@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { site } from '../../data/site'
+import Reveal from '../Reveal'
 
 const SERVICES = [
   'General enquiry',
@@ -74,7 +75,7 @@ function Contact() {
 
   return (
     <section id="contact" className="bg-ivory px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -294,7 +295,7 @@ function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

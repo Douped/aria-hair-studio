@@ -1,3 +1,5 @@
+import Reveal from '../Reveal'
+
 // About — the salon story, paired with a warm interior image and a few
 // quiet highlights.
 //
@@ -15,7 +17,7 @@ const highlights = [
 function About() {
   return (
     <section id="about" className="bg-cream px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <Reveal className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Story */}
         <div className="max-w-xl">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -75,7 +77,7 @@ function About() {
             aria-hidden="true"
           />
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }

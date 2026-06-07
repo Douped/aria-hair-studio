@@ -1,11 +1,12 @@
 import { serviceGroups } from '../../data/services'
 import { site } from '../../data/site'
+import Reveal from '../Reveal'
 
 // Services & Pricing — an elegant, readable priced menu grouped by category.
 function Services() {
   return (
     <section id="services" className="bg-cream px-6 py-24 sm:py-28 lg:py-32">
-      <div className="mx-auto max-w-7xl">
+      <Reveal className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-gold">
@@ -26,7 +27,7 @@ function Services() {
           {serviceGroups.map((group) => (
             <div
               key={group.title}
-              className="rounded-xl border border-sand bg-ivory p-8 shadow-sm"
+              className="rounded-xl border border-sand bg-ivory p-8 shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <h3 className="text-2xl">{group.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-charcoal-soft">
@@ -68,7 +69,7 @@ function Services() {
             Book a Consultation
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   )
 }
