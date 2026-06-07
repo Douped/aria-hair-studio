@@ -1,68 +1,69 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import 'tailwindcss';
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/*
+ * Aria Hair Studio — design tokens
+ * Clean, minimal, luxury lean. Warm neutral base, one restrained
+ * plum/burgundy accent, and a sparing soft-gold detail.
+ *
+ * Tailwind v4 reads these CSS variables to generate utilities, e.g.
+ * --color-plum -> bg-plum / text-plum / border-plum,
+ * --font-serif -> font-serif.
+ */
+@theme {
+  /* Warm neutral base — ivory / cream / taupe */
+  --color-ivory: #fbf8f3;
+  --color-cream: #f4eee4;
+  --color-sand: #ece4d7;
+  --color-taupe: #a99c8d;
+  --color-taupe-light: #d8cfc4;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Text — warm charcoal */
+  --color-charcoal: #2b2724;
+  --color-charcoal-soft: #5a534c;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* The single restrained accent — muted plum / burgundy */
+  --color-plum: #5b3a4a;
+  --color-plum-dark: #472d3a;
+  --color-plum-soft: #7a5364;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* Sparing soft-gold detail */
+  --color-gold: #c2a878;
+  --color-gold-soft: #d7c4a3;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* Type — elegant serif headings, clean sans body */
+  --font-serif: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* Site-wide content max width */
+  --spacing-content: 80rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor jumps for the sticky navbar (refined later). */
+    scroll-padding-top: 5rem;
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    line-height: 1.7;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-charcoal;
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* Honor users who prefer reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
