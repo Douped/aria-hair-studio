@@ -4,7 +4,7 @@ A marketing website for **Aria Hair Studio**, a fictional upscale hair salon in 
 
 > Built with React + Tailwind, using AI-assisted development (Claude Code) with a focus on clean architecture and incremental commits.
 
-**Live demo:** _add your Netlify URL here once deployed — see [Deployment](#deployment)._
+**Live demo:** **[ariahairstudio.netlify.app](https://ariahairstudio.netlify.app/)**
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Douped/aria-hair-studio)
 
