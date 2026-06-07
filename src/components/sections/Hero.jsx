@@ -29,7 +29,7 @@ function Hero() {
       {/* Content */}
       <div className="relative mx-auto w-full max-w-7xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="font-sans text-xs uppercase tracking-[0.35em] text-gold-soft">
+          <p className="font-sans text-[0.7rem] uppercase tracking-[0.22em] text-gold-soft sm:text-xs sm:tracking-[0.35em]">
             {site.name} &middot; Brantford, Ontario
           </p>
 

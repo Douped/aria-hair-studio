@@ -3,7 +3,7 @@ import { stylists } from '../../data/stylists'
 // Stylists — three bio cards (portrait, name, role/specialty, short bio).
 function Stylists() {
   return (
-    <section id="stylists" className="bg-cream px-6 py-24 sm:py-28">
+    <section id="stylists" className="bg-cream px-6 py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">

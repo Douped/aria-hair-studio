@@ -4,7 +4,7 @@ import { galleryItems } from '../../data/gallery'
 // subtle hover zoom and caption reveal.
 function Gallery() {
   return (
-    <section id="gallery" className="bg-ivory px-6 py-24 sm:py-28">
+    <section id="gallery" className="bg-ivory px-6 py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
