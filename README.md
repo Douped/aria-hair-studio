@@ -4,6 +4,10 @@ A marketing website for **Aria Hair Studio**, a fictional upscale hair salon in 
 
 > Built with React + Tailwind, using AI-assisted development (Claude Code) with a focus on clean architecture and incremental commits.
 
+**Live demo:** _add your Netlify URL here once deployed — see [Deployment](#deployment)._
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Douped/aria-hair-studio)
+
 ![Aria Hair Studio — hero](docs/screenshots/home.jpg)
 
 ---
@@ -91,6 +95,22 @@ Content lives in plain data modules under `src/data/`, kept separate from presen
 ## A note on content
 
 This is a fictional demo. All imagery is from [Unsplash](https://unsplash.com/) as a placeholder for real client and salon photography, and the stylist names, bios, testimonials, address, phone, email, and pricing are illustrative. The "Book Now" / booking buttons link to a placeholder external booking URL (e.g. Fresha/Booksy) — there is no booking backend, and the contact form is front-end only (it validates and shows a success state but does not send anything).
+
+## Deployment
+
+The site is a static build, configured for **Netlify** via [`netlify.toml`](netlify.toml) (build command `npm run build`, publish directory `dist`, an SPA redirect, Node 22, and basic caching/security headers). Any static host works.
+
+**Option A — connect the repo (recommended, auto-deploys on push):**
+
+1. In Netlify, **Add new site → Import an existing project** and pick this repository.
+2. Netlify reads `netlify.toml`, so build settings are detected automatically — just **Deploy**.
+3. Optionally rename the site (Site configuration → Change site name) for a tidy URL like `https://aria-hair-studio.netlify.app`.
+
+Every push to `main` then triggers a fresh deploy.
+
+**Option B — one click:** use the **Deploy to Netlify** button at the top of this README.
+
+**Option C — manual:** run `npm run build` and drag the generated `dist/` folder onto [app.netlify.com/drop](https://app.netlify.com/drop).
 
 ## License
 

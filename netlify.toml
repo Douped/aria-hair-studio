@@ -1,0 +1,27 @@
+# Netlify deploy configuration for Aria Hair Studio (Vite + React SPA).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Match the local toolchain (Vite 6 needs Node 18+/20.19+/22.12+).
+  NODE_VERSION = "22"
+
+# Single-page app: serve index.html for any path so deep links / refreshes work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# A few sensible default headers for a static marketing site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # Vite fingerprints asset filenames, so they can be cached aggressively.
+    Cache-Control = "public, max-age=31536000, immutable"
